@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="../../index2.html"><b>Toko</b> ENI</a>
+			<a href="../../index2.html"><b>Starter</b> Codeigniter</a>
 		</div>
 		<!-- /.login-logo -->
 		<div class="card">

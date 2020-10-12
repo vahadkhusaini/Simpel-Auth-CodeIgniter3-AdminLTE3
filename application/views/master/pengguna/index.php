@@ -27,7 +27,7 @@
       								<th>No</th>
       								<th>Nama Pengguna</th>
       								<th>Status</th>
-                      <th>Hak Akses</th>
+                      				<th>Hak Akses</th>
       								<th>Action</th>
       							</tr>
       						</thead>
@@ -44,7 +44,7 @@
 									  : 
 									  '<a href="javascript:void(0)" class="badge badge-danger item_hapus">Tidak Aktif</a>' ?>
 									</td>
-                  <td><?= $u['hak_akses'] == '1' ? 'Pemilik' : 'Admin'; ?>
+                  <td><?= $u['hak_akses'] == '1' ? 'Superadmin' : 'Admin'; ?>
                   
                   </td>
       								<td>
@@ -117,7 +117,7 @@
       							<div class="col-sm-8">
                         <select class="form-control" id="satuan" name="hakakses">
                           <option disabled selected value="">Pilih</option>
-                          <option value="1">Pemilik</option>
+                          <option value="1">Superadmin</option>
                           <option value="0">Admin</option>
                         </select>
       							</div>

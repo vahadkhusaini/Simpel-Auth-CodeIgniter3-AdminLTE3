@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong>Toko Retail</strong>
+    <strong>Starter Codeigniter</strong>
     All rights reserved.
   </footer>
 
