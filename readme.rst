@@ -6,13 +6,13 @@ Dibuat dengan CodeIgniter 3 serta syntax PHP 7, untuk template menggunakan Admin
 Dapat digunakan sebagai starter project dengan auth sederhana, dengan sistem login dua level hak akses (admin dan superadmin) serta dilengkapi dengan base_url dinamis sehingga tidak perlu lagi mengubah config pada base_url
 
 *******************
-Cara Instalasi
+Intergrasi ke firebase
 *******************
 
-- letakkan project pada server favoritmu
-- Import database starter_ci_auth.sql (default nama database starter_ci_auth) pada phpmyadmin atau sejenisnya
-- Berikan nama database sesuai keinginanmu, jangan lupa configurasi nama database pada config/database.php (bila nama database default diganti)
-- Username : admin/superadmin
-- Password : asddsa
+- Menuju akun firebase console
+- Buka Setting > Service Account
+- Klik Generate New Private Key, lalu klik Generate Key
+- Copy file .json yang telah didownload ke application/config/paste here
+- Buka file firebase.php, lalu ubah ke nama file .json yang sudah di paste
 
-ENJOY !!
+ENJOY!!!
