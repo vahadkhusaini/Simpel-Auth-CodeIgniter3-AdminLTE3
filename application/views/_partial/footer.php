@@ -45,80 +45,14 @@
 <script src="<?= base_url('assets/'); ?>plugins/flatpickr/package/dist/flatpickr.js"></script>
 
 <script src="<?= base_url('assets/'); ?>plugins/cleave/dist/cleave.js"></script>
-<script src="<?= base_url('assets/'); ?>myjs/myscript.js"></script>
 
 </body>
 </html>
 <script>
-$(document).ready(function () {
-
-	$("input[name='tanggal']").flatpickr({
-		altInput: true,
-		altFormat: "d/m/Y",
-		dateFormat: "Y/m/d",
-		defaultDate: "today"
+	$(document).ready(function () {
+		$('.custom-file-input').on('change', function () {
+			let fileName = $(this).val().split('\\').pop();
+			$(this).next('.custom-file-label').addClass("selected").html(fileName);
+		});	
 	});
-
-	$("#tanggal1").flatpickr({
-		altInput: true,
-		altFormat: "d/m/Y",
-		dateFormat: "Y-m-d",
-		defaultDate: "today"
-	});
-
-	$("#tanggal2").flatpickr({
-		altInput: true,
-		altFormat: "d/m/Y",
-		dateFormat: "Y-m-d",
-		defaultDate: "today"
-	});
-
-	$("#tanggal-pelunasan").flatpickr({
-		altInput: true,
-		altFormat: "d/m/Y",
-		dateFormat: "Y/m/d",
-		defaultDate: "today"
-	});
-	
-	const tanggal = $("input[name='tanggal']").val();
-	const tgl_format = moment(tanggal).format('DD/MM/YYYY');
-	$("#tempo").attr('readonly', true);
-	$("#tempo").val(0);
-	$("input[name='tanggal_tempo']").val(tgl_format);
-
-	function kredit() {
-		const tempo = $("#tempo").val();
-		const tanggal = $("input[name='tanggal']").val();
-		// const format = moment(tanggal).format('D/MM/YYYY');
-
-		const tgl_tempo = moment(tanggal).add(tempo, 'days')
-		const tgl_fix = moment(tgl_tempo).format('DD/MM/YYYY');
-		$("input[name='tanggal_tempo']").val(tgl_fix);
-
-		console.log(tempo, tanggal, tgl_fix);
-	}
-
-	function tunai() {
-		const tanggal = $("input[name='tanggal']").val();
-		const tgl_format = moment(tanggal).format('DD/MM/YYYY');
-		$("#tempo").attr('readonly', true);
-		$("#tempo").val(0);
-		$("input[name='tanggal_tempo']").val(tgl_format);
-	}
-
-	$("#tunai").on('click', function () {
-		tunai();
-	});
-
-	$("#kredit").on('click', function () {
-		$("#tempo").val(null);
-		$("#tempo").attr('readonly', false);
-	});
-
-	$("#tempo").on('keyup', function () {
-		kredit();
-	  });
-	  
-});
-
 </script>

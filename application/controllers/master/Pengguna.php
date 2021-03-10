@@ -13,7 +13,6 @@ class Pengguna extends CI_Controller
 
     public function index()
     {
-
         $data = [
             'title' => 'Pengguna',
             'user' =>  $this->Master_model->get_data('user','id_pengguna'),
